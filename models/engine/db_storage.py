@@ -91,12 +91,12 @@ class DBStorage:
                 return obj
             return None
 
-    def count(self, cls=None):
-        """ method that returns the number of obj in storage matching the
+    """def count(self, cls=None):
+        \""" method that returns the number of obj in storage matching the
             given class.
             If no class is passed, returns the count of all objects
             in storage
-        """
+        \"""
         count = 0
         if cls is not None:
             for key, value in self.__objects.items():
@@ -106,4 +106,4 @@ class DBStorage:
         else:
             for key in self.__objects.keys():
                 count += 1
-            return count
+            return count"""
