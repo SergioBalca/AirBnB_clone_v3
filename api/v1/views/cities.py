@@ -29,7 +29,7 @@ def cities_state(state_id):
         else:
             r_json = request.json
             r_json['state_id'] = state_id
-            new = City(**json)
+            new = City(**r_json)
             new.save()
             return make_response(new.to_dict(), 201)
     abort(404)
