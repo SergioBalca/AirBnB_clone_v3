@@ -93,12 +93,10 @@ class FileStorage:
             in storage
         """
         count = 0
-        if cls is not None:
-            for key, value in self.__objects.items():
-                if cls == value.__class__ or cls == value.__class__.__name__:
-                    count += 1
-            return count
+        if cls:
+            objs = self.all(cls).values()
         else:
-            for key in self.__objects.keys():
-                count += 1
-            return count
+            objs = self.all().values()
+        for obj in objs:
+            count += 1
+        return count
