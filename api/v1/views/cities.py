@@ -6,6 +6,7 @@ from models.base_model import *
 from api.v1.views import app_views
 from models import storage
 from models.state import *
+from models.city import City
 from flask import jsonify, abort, request, make_response
 
 
