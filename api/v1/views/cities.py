@@ -5,7 +5,7 @@ from crypt import methods
 from models.base_model import *
 from api.v1.views import app_views
 from models import storage
-from models.state import State
+from models.state import *
 from flask import jsonify, abort, request, make_response
 
 
