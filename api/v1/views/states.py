@@ -19,7 +19,7 @@ def get_states():
     return jsonify(state_list)
 
 
-@app_views.route('/states/<int: state_id>', strict_slashes=False)
+@app_views.route('/states/<state_id>', strict_slashes=False)
 def get_state_by_id(state_id):
     """Retrives a State object"""
     state = storage.get(State, state_id)
@@ -29,7 +29,7 @@ def get_state_by_id(state_id):
     abort(404)
 
 
-@app_views.route('/states/<int: state_id>', strict_slashes=False,
+@app_views.route('/states/<state_id>', strict_slashes=False,
                  methods='DELETE')
 def delete_state(state_id):
     """Adds a new State object"""
@@ -37,7 +37,7 @@ def delete_state(state_id):
     if state:
         storage.delete(state)
         storage.save()
-        return make_response(jsonify({}), 200)
+        return {}
     """Raises an error 404 if id is not linked to an State"""
     abort(404)
 
@@ -55,7 +55,7 @@ def post_state():
         return make_response(new.to_dict(), 201)
 
 
-@app_views.route('/states/<int: state_id>', strict_slashes=False,
+@app_views.route('/states/<state_id>', strict_slashes=False,
                  methods='PUT')
 def update_state(state_id):
     """Updates an State object"""
