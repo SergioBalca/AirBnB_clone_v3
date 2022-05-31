@@ -12,6 +12,7 @@ def status():
     """Returns status of API"""
     return jsonify({"status": "OK"})
 
+
 @app_views.route('/stats', strict_slashes=False)
 def stats():
     """Returns the number of each object by type"""
