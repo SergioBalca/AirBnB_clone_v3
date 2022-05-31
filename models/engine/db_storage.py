@@ -105,4 +105,3 @@ class DBStorage:
         for obj in objs:
             count += 1
         return count
-
