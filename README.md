@@ -126,6 +126,17 @@ TestBaseModel class:
 * `def test_user_module_docstring(self)` - Test for the user.py module docstring
 * `def test_user_class_docstring(self)` - Test for the User class docstring
 
+[/api/v1/views/states.py](/api/v1/views/states.py)
+* `def states()` - Function that retrieve and save a new State
+* `def state(state_id)` - Function that retrieve, delete and put a State
+
+[/api/v1/views/cities.py](/api/v1/views/cities.py)
+* `def cities_state(state_id)` - Function that retrieve and save a new City object
+* `def city(city_id)` - Function that retrieve, delete and put a City
+
+[/api/v1/views/amenities.py](/api/v1/views/amenities.py)
+* `def amenities()` - Function that retrieve and save a new City object
+* `def amenity(amenity_id)` - Function that retrieve, delete and put an amenity
 
 ## Examples of use
 ```
